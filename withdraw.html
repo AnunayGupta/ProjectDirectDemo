@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .headline-font { font-family: 'Newsreader', serif; }
+        .serif-display { font-family: 'Playfair Display', serif; }
+        .tabular-nums { font-variant-numeric: tabular-nums; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #E2DDD6; border-radius: 10px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fcf9f3",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#101f12",
+                      "tertiary": "#506353",
+                      "primary-container": "#b5a07a",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e5e2dc",
+                      "tertiary-fixed": "#d3e8d4",
+                      "surface-container-low": "#f6f3ed",
+                      "tertiary-fixed-dim": "#b7ccb8",
+                      "outline": "#7e766b",
+                      "surface-container": "#f0eee8",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#d3e5d0",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#2b3d2f",
+                      "surface-container-highest": "#e5e2dc",
+                      "outline-variant": "#cfc5b8",
+                      "on-surface": "#1c1c18",
+                      "on-background": "#1c1c18",
+                      "secondary": "#526253",
+                      "surface-bright": "#fcf9f3",
+                      "primary-fixed": "#f8e0b6",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#576757",
+                      "tertiary-container": "#94a896",
+                      "surface-tint": "#6d5c3b",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#3b4b3c",
+                      "inverse-on-surface": "#f3f0ea",
+                      "secondary-fixed": "#d6e7d3",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#453719",
+                      "primary": "#6d5c3b",
+                      "error-container": "#ffdad6",
+                      "surface": "#fcf9f3",
+                      "on-surface-variant": "#4c463c",
+                      "on-primary-fixed": "#251a02",
+                      "secondary-fixed-dim": "#bacbb8",
+                      "on-tertiary-fixed-variant": "#394b3c",
+                      "inverse-surface": "#31312d",
+                      "on-primary-fixed-variant": "#544526",
+                      "surface-dim": "#dcdad4",
+                      "primary-fixed-dim": "#dac49b",
+                      "on-tertiary-fixed": "#0e1f13",
+                      "surface-container-high": "#ebe8e2",
+                      "inverse-primary": "#dac49b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Newsreader"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-[240px] h-screen fixed left-0 top-0 bg-[#2C3B2D] dark:bg-[#1a241b] flex flex-col h-full py-8 z-50">
+<div class="px-8 mb-12">
+<h1 class="font-['Newsreader'] italic text-[#B5A07A] text-xl leading-none">Clinch Wealth</h1>
+<p class="font-['Inter'] text-[10px] uppercase tracking-[0.2em] text-white/50 mt-1">Private Atelier</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-8 py-3 text-white/70 font-normal hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="group">group</span>
+<span class="font-['Inter'] tracking-tight">Clients</span>
+</a>
+<a class="flex items-center px-8 py-3 text-[#B5A07A] font-bold border-r-2 border-[#B5A07A] hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-['Inter'] tracking-tight">Actions</span>
+</a>
+<a class="flex items-center px-8 py-3 text-white/70 font-normal hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] tracking-tight">Reports</span>
+</a>
+<a class="flex items-center px-8 py-3 text-white/70 font-normal hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="settings">settings</span>
+<span class="font-['Inter'] tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="px-8 mt-auto flex items-center gap-3">
+<img alt="professional portrait" class="w-10 h-10 rounded shadow-sm object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw51BLnLyvI-7kRQFurX_1BuorOk3RJ5yeOv1NchE08oU5-_ZbA3YCu-bFIFnoQNaEB9XlJhAC-OtDCKOrhGf13Pme8C9KS7FNAuUyodaSPEoXNmYSMeV-6VVpyYL2PgQDqSwl8PkmJ_uYuN2V0NVtV6HVNIWFBSILNZ1wHwyFlf5BC87HewA6JKXqm0GFic1B7gUCa7kJ1Kna-3AiBZ2ZNzYQJeVjFl5KCT6fh83Xv5QlUo1eWUIxgmkhMpcXSJ_NtFa1lhtM0Q"/>
+<div class="overflow-hidden">
+<p class="text-white text-xs font-semibold truncate">Andrew Collins</p>
+<p class="text-white/40 text-[10px] uppercase tracking-wider truncate">Director</p>
+</div>
+</div>
+</aside>
+<div class="ml-[240px] flex-1 flex flex-col">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-20 px-10 bg-[#fcf9f3] dark:bg-[#1c1c18] border-none shadow-sm z-40">
+<div class="flex flex-col">
+<h2 class="serif-display text-2xl font-bold text-[#6d5c3b]">Portfolio Actions</h2>
+<p class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c18]/60 mt-0.5">Seán O'Brien — €428,500</p>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative flex items-center bg-surface-container-low px-4 py-2 rounded">
+<span class="material-symbols-outlined text-sm text-outline mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-['Inter'] w-48 text-on-surface" placeholder="Search parameters..." type="text"/>
+</div>
+<div class="flex space-x-4 text-[#1c1c18]/60">
+<span class="material-symbols-outlined cursor-pointer hover:text-[#6d5c3b] transition-all" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#6d5c3b] transition-all" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="p-10 flex gap-10 overflow-auto bg-[#F2EFE9]">
+<!-- Left Panel (60%) -->
+<section class="w-3/5 space-y-8">
+<!-- Segmented Control -->
+<div class="flex space-x-8 border-none overflow-x-auto pb-2 no-scrollbar">
+<button class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c18]/40 hover:text-[#6d5c3b] transition-colors pb-2">Rebalance</button>
+<button class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c18]/40 hover:text-[#6d5c3b] transition-colors pb-2">Add Instrument</button>
+<button class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c18]/40 hover:text-[#6d5c3b] transition-colors pb-2">Remove Instrument</button>
+<button class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#1c1c18]/40 hover:text-[#6d5c3b] transition-colors pb-2">Deploy Capital</button>
+<button class="font-['Inter'] uppercase tracking-widest text-[10px] text-[#6d5c3b] font-bold border-b-2 border-[#6d5c3b] pb-2">Withdraw</button>
+</div>
+<div class="space-y-2">
+<h3 class="serif-display text-4xl text-[#1A1A1A]">Withdraw</h3>
+<p class="text-secondary text-sm font-['Inter']">Liquidate positions across the selected client segment to facilitate capital withdrawal.</p>
+</div>
+<div class="space-y-4">
+<label class="block font-['Inter'] font-bold text-[11px] uppercase tracking-widest text-on-surface-variant">Amount to withdraw</label>
+<div class="relative max-w-sm">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 serif-display text-xl text-primary">€</span>
+<input class="w-full bg-white border border-[#E2DDD6] py-4 pl-10 pr-4 text-2xl serif-display focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all outline-none rounded" type="text" value="15,000"/>
+</div>
+</div>
+<div class="space-y-6">
+<label class="block font-['Inter'] font-bold text-[11px] uppercase tracking-widest text-on-surface-variant">Withdrawal Method</label>
+<div class="grid grid-cols-2 gap-4">
+<div class="relative bg-[#FFFBF5] border-l-4 border-[#B5A07A] p-5 cursor-pointer shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<span class="text-sm font-bold text-on-surface">Sell Proportionally</span>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="radio_button_checked" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Liquidates positions based on their current weight in the portfolio.</p>
+</div>
+<div class="bg-white border border-[#E2DDD6] p-5 cursor-pointer hover:border-outline-variant transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-sm font-semibold text-on-surface/60">Sell Specific Assets</span>
+<span class="material-symbols-outlined text-outline-variant text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-relaxed opacity-60">Allows manual selection of tickers and fixed quantities to sell.</p>
+</div>
+</div>
+<!-- Proportional Sell Table -->
+<div class="bg-white rounded overflow-hidden shadow-sm border border-[#E2DDD6]">
+<table class="w-full text-left font-['Inter']">
+<thead class="bg-surface-container-low border-b border-[#E2DDD6]">
+<tr>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Asset Class / Ticker</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant text-right">Target %</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant text-right">Withdraw Amount</th>
+</tr>
+</thead>
+<tbody class="text-sm tabular-nums">
+<tr class="bg-[#FFF5F5] border-b border-[#E2DDD6]/50">
+<td class="px-6 py-3">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Apple Inc.</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-surface-container rounded text-outline">AAPL</span>
+</div>
+</td>
+<td class="px-6 py-3 text-right text-on-surface-variant">20.0%</td>
+<td class="px-6 py-3 text-right font-medium text-[#C0392B]">- €3,000</td>
+</tr>
+<tr class="bg-[#FFF5F5] border-b border-[#E2DDD6]/50">
+<td class="px-6 py-3">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Microsoft</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-surface-container rounded text-outline">MSFT</span>
+</div>
+</td>
+<td class="px-6 py-3 text-right text-on-surface-variant">12.0%</td>
+<td class="px-6 py-3 text-right font-medium text-[#C0392B]">- €1,800</td>
+</tr>
+<tr class="bg-[#FFF5F5] border-b border-[#E2DDD6]/50">
+<td class="px-6 py-3">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Vanguard S&amp;P 500</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-surface-container rounded text-outline">VOO</span>
+</div>
+</td>
+<td class="px-6 py-3 text-right text-on-surface-variant">10.0%</td>
+<td class="px-6 py-3 text-right font-medium text-[#C0392B]">- €1,500</td>
+</tr>
+<tr class="bg-[#FFF5F5] border-b border-[#E2DDD6]/50">
+<td class="px-6 py-3">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Berkshire Hathaway</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-surface-container rounded text-outline">BRK.B</span>
+</div>
+</td>
+<td class="px-6 py-3 text-right text-on-surface-variant">15.0%</td>
+<td class="px-6 py-3 text-right font-medium text-[#C0392B]">- €2,250</td>
+</tr>
+<tr class="bg-[#FFF5F5] border-b border-[#E2DDD6]/50">
+<td class="px-6 py-3">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Nvidia Corp</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-surface-container rounded text-outline">NVDA</span>
+</div>
+</td>
+<td class="px-6 py-3 text-right text-on-surface-variant">22.9%</td>
+<td class="px-6 py-3 text-right font-medium text-[#C0392B]">- €3,435</td>
+</tr>
+<tr class="bg-[#FFF5F5] border-b border-[#E2DDD6]/50">
+<td class="px-6 py-3">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">iShares Core Euro Corp</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-surface-container rounded text-outline">IEAG</span>
+</div>
+</td>
+<td class="px-6 py-3 text-right text-on-surface-variant">10.0%</td>
+<td class="px-6 py-3 text-right font-medium text-[#C0392B]">- €1,500</td>
+</tr>
+<tr class="bg-[#FFF5F5]">
+<td class="px-6 py-3">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">Cash (EUR)</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-surface-container rounded text-outline">CASH</span>
+</div>
+</td>
+<td class="px-6 py-3 text-right text-on-surface-variant">10.1%</td>
+<td class="px-6 py-3 text-right font-medium text-[#C0392B]">- €1,515</td>
+</tr>
+</tbody>
+<tfoot class="bg-surface-container-high border-t border-[#E2DDD6]">
+<tr>
+<td class="px-6 py-4 text-xs font-bold text-on-surface uppercase tracking-widest text-right" colspan="2">Total Per Portfolio</td>
+<td class="px-6 py-4 text-right text-lg serif-display font-bold text-[#1A1A1A]">€15,000.00</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</section>
+<!-- Right Panel (40%): Impact Preview -->
+<section class="w-2/5 space-y-6">
+<div class="bg-white border border-[#E2DDD6] rounded shadow-sm p-8 h-full flex flex-col">
+<div class="space-y-1 mb-8">
+<h4 class="serif-display text-2xl text-[#1A1A1A]">Impact Preview</h4>
+<p class="text-secondary text-xs uppercase tracking-widest font-medium">Batch Summary</p>
+</div>
+<!-- Single Client Strip -->
+<div class="bg-[#FFFBF5] border border-[#E2DDD6] p-5 mb-8">
+<div class="flex flex-col gap-1">
+<span class="text-base font-bold font-['Inter'] text-on-surface">Seán O'Brien</span>
+<span class="text-[11px] text-tertiary/70 font-medium font-['Inter']">Andrew Collins — Director</span>
+<span class="text-[11px] text-tertiary/70 font-medium font-['Inter']">Portfolio value: €428,500</span>
+</div>
+</div>
+<div class="flex-1 overflow-auto pr-2 custom-scrollbar">
+<label class="block font-['Inter'] font-bold text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">Trade Breakdown</label>
+<div class="space-y-3 font-['Inter']">
+<div class="flex justify-between items-center py-2 border-b border-[#E2DDD6]/50">
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface">Apple Inc.</span>
+<span class="text-[9px] px-1 py-0.5 bg-surface-container rounded text-outline uppercase">AAPL</span>
+</div>
+<span class="text-sm tabular-nums font-semibold text-[#93000a]">Sell €3,000</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-[#E2DDD6]/50">
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface">Microsoft Corp.</span>
+<span class="text-[9px] px-1 py-0.5 bg-surface-container rounded text-outline uppercase">MSFT</span>
+</div>
+<span class="text-sm tabular-nums font-semibold text-[#93000a]">Sell €1,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-[#E2DDD6]/50">
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface">Vanguard S&amp;P 500</span>
+<span class="text-[9px] px-1 py-0.5 bg-surface-container rounded text-outline uppercase">VOO</span>
+</div>
+<span class="text-sm tabular-nums font-semibold text-[#93000a]">Sell €1,500</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-[#E2DDD6]/50">
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface">Berkshire Hathaway</span>
+<span class="text-[9px] px-1 py-0.5 bg-surface-container rounded text-outline uppercase">BRK.B</span>
+</div>
+<span class="text-sm tabular-nums font-semibold text-[#93000a]">Sell €2,250</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-[#E2DDD6]/50">
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface">Nvidia Corp.</span>
+<span class="text-[9px] px-1 py-0.5 bg-surface-container rounded text-outline uppercase">NVDA</span>
+</div>
+<span class="text-sm tabular-nums font-semibold text-[#93000a]">Sell €3,435</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-[#E2DDD6]/50">
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface">iShares Core Euro Govt Bond</span>
+<span class="text-[9px] px-1 py-0.5 bg-surface-container rounded text-outline uppercase">IEAG</span>
+</div>
+<span class="text-sm tabular-nums font-semibold text-[#93000a]">Sell €1,500</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-[#E2DDD6]/50">
+<span class="text-sm text-on-surface">Cash &amp; Equivalents</span>
+<span class="text-sm tabular-nums font-semibold text-[#93000a]">Sell €1,515</span>
+</div>
+</div>
+<div class="mt-4 pt-2">
+<p class="text-sm font-bold font-['Inter'] text-on-surface">Net trade value: €15,000</p>
+</div>
+</div>
+<!-- Execution Footer -->
+<div class="mt-8 pt-8 border-t border-[#E2DDD6] space-y-6">
+<div class="flex justify-between items-end">
+<span class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">Batch Execution Amount</span>
+<span class="text-3xl serif-display font-bold text-[#1A1A1A]">€15,000.00</span>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-[#B5A07A] text-white py-4 px-6 text-sm font-bold uppercase tracking-widest hover:bg-primary transition-colors shadow-lg shadow-[#B5A07A]/20">
+                                Confirm &amp; Execute
+                            </button>
+<div class="flex flex-col gap-3">
+<p class="text-[10px] text-secondary leading-tight italic">This will generate trade instructions for Seán O'Brien. This action cannot be undone.</p>
+<div class="flex justify-end">
+<button class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-[#C0392B] transition-colors underline decoration-dotted underline-offset-4">Cancel Action</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

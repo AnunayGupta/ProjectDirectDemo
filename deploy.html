@@ -1,0 +1,305 @@
+<html class="light" lang="en"><head></head><body class="flex min-h-screen bg-[#fcf9f3]">```html
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@100..900&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#d6e7d3",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2dc",
+                        "on-tertiary-fixed-variant": "#394b3c",
+                        "surface": "#fcf9f3",
+                        "surface-container-high": "#ebe8e2",
+                        "primary": "#6d5c3b",
+                        "on-surface-variant": "#4c463c",
+                        "primary-fixed-dim": "#dac49b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d3e5d0",
+                        "on-tertiary-fixed": "#0e1f13",
+                        "on-secondary-container": "#576757",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#b5a07a",
+                        "on-secondary-fixed-variant": "#3b4b3c",
+                        "inverse-primary": "#dac49b",
+                        "on-surface": "#1c1c18",
+                        "on-secondary-fixed": "#101f12",
+                        "inverse-surface": "#31312d",
+                        "secondary-fixed-dim": "#bacbb8",
+                        "surface-dim": "#dcdad4",
+                        "surface-container-low": "#f6f3ed",
+                        "secondary": "#526253",
+                        "outline-variant": "#cfc5b8",
+                        "surface-tint": "#6d5c3b",
+                        "on-tertiary-container": "#2b3d2f",
+                        "on-primary-fixed-variant": "#544526",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#251a02",
+                        "surface-bright": "#fcf9f3",
+                        "inverse-on-surface": "#f3f0ea",
+                        "outline": "#7e766b",
+                        "background": "#fcf9f3",
+                        "primary-fixed": "#f8e0b6",
+                        "surface-container": "#f0eee8",
+                        "tertiary-fixed": "#d3e8d4",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#506353",
+                        "tertiary-container": "#94a896",
+                        "tertiary-fixed-dim": "#b7ccb8",
+                        "surface-container-highest": "#e5e2dc",
+                        "on-primary-container": "#453719",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Playfair Display", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tabular-nums { font-variant-numeric: tabular-nums; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcf9f3; color: #1c1c18; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+<!-- SideNavBar -->
+<aside class="bg-[#2C3B2D] w-[240px] h-full fixed left-0 top-0 flex flex-col py-8 z-50">
+<div class="px-6 mb-12">
+<h1 class="text-xl font-serif text-[#B5A07A] tracking-tight">CLINCH</h1>
+<p class="text-[10px] uppercase tracking-wider mt-1 font-label" style="color: #8A9E8C;">WEALTH MANAGEMENT</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-4 py-3 hover:bg-white/5 transition-colors duration-200 text-stone-400 hover:text-stone-200 pl-4" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="group">group</span>
+<span class="label-sm uppercase tracking-wider text-xs font-label">Clients</span>
+</a>
+<!-- Active State: Actions -->
+<a class="flex items-center gap-4 py-3 hover:bg-white/5 transition-colors duration-200 text-white font-semibold border-l-2 border-[#B5A07A] pl-4" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="bolt">bolt</span>
+<span class="label-sm uppercase tracking-wider text-xs font-label">Actions</span>
+</a>
+<a class="flex items-center gap-4 py-3 hover:bg-white/5 transition-colors duration-200 text-stone-400 hover:text-stone-200 pl-4" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="description">description</span>
+<span class="label-sm uppercase tracking-wider text-xs font-label">Reports</span>
+</a>
+<a class="flex items-center gap-4 py-3 hover:bg-white/5 transition-colors duration-200 text-stone-400 hover:text-stone-200 pl-4" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span class="label-sm uppercase tracking-wider text-xs font-label">Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-auto flex items-center gap-3 pt-6 border-t border-white/5">
+<div class="w-8 h-8 rounded bg-[#B5A07A] flex items-center justify-center text-[#2C3B2D] font-bold text-xs">AC</div>
+<div class="overflow-hidden">
+<p class="text-xs text-white font-semibold truncate">Andrew Collins</p>
+<p class="text-[10px] text-stone-400 truncate">Director</p>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-[240px] flex-1 min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-[#fcf9f3] dark:bg-stone-950 flex justify-between items-end w-full px-12 pt-10 pb-4 sticky top-0 z-40">
+<div>
+<h1 class="font-serif text-[#6d5c3b] dark:text-[#B5A07A] font-bold text-3xl">Portfolio Actions</h1>
+<p class="text-sm text-stone-500 font-label mt-1">Seán O'Brien — €428,500</p>
+</div>
+<div class="flex items-center gap-8">
+<nav class="flex gap-6 items-end">
+<a class="text-stone-500 pb-2 text-xs font-label uppercase hover:text-[#6d5c3b] transition-all" href="#">Rebalance</a>
+<a class="text-stone-500 pb-2 text-xs font-label uppercase hover:text-[#6d5c3b] transition-all" href="#">Add Instrument</a>
+<a class="text-stone-500 pb-2 text-xs font-label uppercase hover:text-[#6d5c3b] transition-all" href="#">Remove Instrument</a>
+<a class="text-[#6d5c3b] border-b-2 border-[#6d5c3b] pb-2 font-bold text-xs font-label uppercase" href="#">Deploy Capital</a>
+<a class="text-stone-500 pb-2 text-xs font-label uppercase hover:text-[#6d5c3b] transition-all" href="#">Withdraw</a>
+</nav>
+<div class="flex gap-4 pb-2 text-[#6d5c3b]">
+<span class="material-symbols-outlined cursor-pointer" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="p-12 grid grid-cols-10 gap-8 items-start">
+<!-- LEFT PANEL: Deploy Capital -->
+<section class="col-span-6 bg-white rounded-lg border border-[#E2DDD6] p-8">
+<div class="mb-8">
+<h2 class="text-3xl font-serif text-[#1c1c18] mb-2">Deploy Capital</h2>
+<p class="text-sm text-[#8A9E8C] font-body">A client has deposited new funds. Select how to deploy the capital across their portfolio.</p>
+</div>
+<!-- Amount Input -->
+<div class="mb-10">
+<label class="block text-xs font-bold uppercase tracking-wider text-[#1c1c18] mb-3">Amount to deploy</label>
+<div class="relative group">
+<span class="absolute left-6 top-1/2 -translate-y-1/2 text-2xl font-bold text-stone-400">€</span>
+<input class="w-full bg-[#fcf9f3] border-none border-b-2 border-[#cfc5b8] focus:border-[#B5A07A] focus:ring-0 text-3xl font-bold tabular-nums pl-12 py-4 text-[#1c1c18]" type="text" value="25,000"/>
+</div>
+<p class="text-xs text-stone-500 mt-2 italic">This amount will be invested across the selected portfolios</p>
+</div>
+<!-- Deployment Methods -->
+<div class="space-y-4">
+<!-- Option A (Selected) -->
+<div class="border-l-4 border-[#B5A07A] bg-[#FFFBF5] p-6 rounded-r-lg">
+<div class="flex items-start gap-4 mb-6">
+<div class="mt-1 w-5 h-5 rounded-full border-2 border-[#B5A07A] flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#B5A07A]"></div>
+</div>
+<div>
+<h3 class="font-bold text-[#1c1c18]">Deploy Proportionally</h3>
+<p class="text-sm text-stone-600">Invest across all holdings according to their current target weightings</p>
+</div>
+</div>
+<!-- Allocation Preview Table -->
+<div class="overflow-hidden rounded border border-[#E2DDD6]">
+<table class="w-full text-left text-xs tabular-nums">
+<thead class="bg-stone-50 text-stone-500 uppercase tracking-tighter">
+<tr>
+<th class="px-4 py-3 font-semibold">Holding</th>
+<th class="px-4 py-3 font-semibold text-right">Target %</th>
+<th class="px-4 py-3 font-semibold text-right">Amount</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E2DDD6]">
+<tr class="bg-[#F5FFF8]">
+<td class="px-4 py-3 font-medium text-stone-800">Apple Inc. <span class="text-stone-400 ml-1">AAPL</span></td>
+<td class="px-4 py-3 text-right">20.0%</td>
+<td class="px-4 py-3 text-right font-bold text-[#2D6A4F]">€5,000</td>
+</tr>
+<tr class="bg-[#F5FFF8]">
+<td class="px-4 py-3 font-medium text-stone-800">Microsoft Corp. <span class="text-stone-400 ml-1">MSFT</span></td>
+<td class="px-4 py-3 text-right">12.0%</td>
+<td class="px-4 py-3 text-right font-bold text-[#2D6A4F]">€3,000</td>
+</tr>
+<tr class="bg-[#F5FFF8]">
+<td class="px-4 py-3 font-medium text-stone-800">Vanguard S&amp;P 500 <span class="text-stone-400 ml-1">VOO</span></td>
+<td class="px-4 py-3 text-right">10.0%</td>
+<td class="px-4 py-3 text-right font-bold text-[#2D6A4F]">€2,500</td>
+</tr>
+<tr class="bg-[#F5FFF8]">
+<td class="px-4 py-3 font-medium text-stone-800">Berkshire Hathaway <span class="text-stone-400 ml-1">BRK.B</span></td>
+<td class="px-4 py-3 text-right">15.0%</td>
+<td class="px-4 py-3 text-right font-bold text-[#2D6A4F]">€3,750</td>
+</tr>
+<tr class="bg-[#F5FFF8]">
+<td class="px-4 py-3 font-medium text-stone-800">Nvidia Corp. <span class="text-stone-400 ml-1">NVDA</span></td>
+<td class="px-4 py-3 text-right">22.9%</td>
+<td class="px-4 py-3 text-right font-bold text-[#2D6A4F]">€5,725</td>
+</tr>
+<tr class="bg-[#F5FFF8]">
+<td class="px-4 py-3 font-medium text-stone-800">iShares Core Euro Govt Bond <span class="text-stone-400 ml-1">IEAG</span></td>
+<td class="px-4 py-3 text-right">10.0%</td>
+<td class="px-4 py-3 text-right font-bold text-[#2D6A4F]">€2,500</td>
+</tr>
+<tr class="bg-[#F5FFF8]">
+<td class="px-4 py-3 font-medium text-stone-800">Cash &amp; Equivalents</td>
+<td class="px-4 py-3 text-right">10.1%</td>
+<td class="px-4 py-3 text-right font-bold text-[#2D6A4F]">€2,525</td>
+</tr>
+</tbody>
+<tfoot class="bg-[#2D6A4F]/5">
+<tr class="font-bold">
+<td class="px-4 py-4 text-stone-900">Total</td>
+<td class="px-4 py-4 text-right">100.0%</td>
+<td class="px-4 py-4 text-right text-[#2D6A4F]">€25,000</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+<!-- Option B (Unselected) -->
+<div class="border border-[#E2DDD6] bg-white p-6 rounded-lg hover:border-stone-400 transition-colors cursor-pointer group">
+<div class="flex items-start gap-4">
+<div class="mt-1 w-5 h-5 rounded-full border-2 border-stone-300 group-hover:border-stone-400"></div>
+<div>
+<h3 class="font-bold text-[#1c1c18]">Deploy Selectively</h3>
+<p class="text-sm text-stone-600">Choose specific holdings to invest in — enter amounts manually</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT PANEL: Impact Preview -->
+<section class="col-span-4 flex flex-col gap-6">
+<div class="bg-white rounded-lg border border-[#E2DDD6] p-8 flex flex-col h-full">
+<h2 class="text-2xl font-serif text-[#1c1c18] mb-6">Impact Preview</h2>
+<!-- Single Client Strip -->
+<div class="bg-[#F5F2ED] rounded-lg p-5 mb-8">
+<p class="font-bold text-stone-900 mb-1">Seán O'Brien</p>
+<p class="text-xs text-[#8A9E8C]">Andrew Collins — Director</p>
+<p class="text-xs text-[#8A9E8C] mt-0.5">Portfolio value: €428,500</p>
+</div>
+<!-- Trade Breakdown -->
+<div class="flex-1 overflow-y-auto mb-6 pr-2">
+<h3 class="text-[10px] uppercase text-stone-500 font-bold tracking-widest mb-4">Proposed Trades</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-1 border-b border-stone-100">
+<span class="text-xs font-medium text-stone-800">Buy Apple Inc. <span class="text-stone-400 text-[10px] ml-1">AAPL</span></span>
+<span class="text-xs font-bold text-[#2D6A4F] tabular-nums">€5,000</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-stone-100">
+<span class="text-xs font-medium text-stone-800">Buy Microsoft Corp. <span class="text-stone-400 text-[10px] ml-1">MSFT</span></span>
+<span class="text-xs font-bold text-[#2D6A4F] tabular-nums">€3,000</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-stone-100">
+<span class="text-xs font-medium text-stone-800">Buy Vanguard S&amp;P 500 <span class="text-stone-400 text-[10px] ml-1">VOO</span></span>
+<span class="text-xs font-bold text-[#2D6A4F] tabular-nums">€2,500</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-stone-100">
+<span class="text-xs font-medium text-stone-800">Buy Berkshire Hathaway <span class="text-stone-400 text-[10px] ml-1">BRK.B</span></span>
+<span class="text-xs font-bold text-[#2D6A4F] tabular-nums">€3,750</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-stone-100">
+<span class="text-xs font-medium text-stone-800">Buy Nvidia Corp. <span class="text-stone-400 text-[10px] ml-1">NVDA</span></span>
+<span class="text-xs font-bold text-[#2D6A4F] tabular-nums">€5,725</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-stone-100">
+<span class="text-xs font-medium text-stone-800">Buy iShares Core Euro Govt Bond <span class="text-stone-400 text-[10px] ml-1">IEAG</span></span>
+<span class="text-xs font-bold text-[#2D6A4F] tabular-nums">€2,500</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-stone-100">
+<span class="text-xs font-medium text-stone-800">Buy Cash &amp; Equivalents</span>
+<span class="text-xs font-bold text-[#2D6A4F] tabular-nums">€2,525</span>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<span class="text-xs font-bold text-stone-900">Net trade value</span>
+<span class="text-sm font-bold text-stone-900 tabular-nums">€25,000</span>
+</div>
+</div>
+<div class="mt-auto border-t border-[#E2DDD6] pt-6">
+<div class="flex justify-between items-end mb-6">
+<span class="text-xs uppercase tracking-widest text-stone-500 font-bold">Total deployment</span>
+<span class="text-2xl font-bold tabular-nums text-stone-900">€25,000</span>
+</div>
+<button class="w-full bg-[#B5A07A] text-white py-4 rounded font-bold text-sm tracking-wide shadow-lg shadow-[#B5A07A]/20 hover:bg-[#a38f6d] transition-all">
+                            Confirm &amp; Execute
+                        </button>
+<div class="text-center mt-4 space-y-3">
+<p class="text-[10px] text-stone-400 italic">This will generate trade instructions for Seán O'Brien. This action cannot be undone.</p>
+<button class="text-xs font-bold text-[#8A9E8C] hover:text-[#526253] uppercase tracking-widest">Cancel</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+```</body></html>
