@@ -11,6 +11,7 @@ interface TourStep {
   targetSelector?: string;
   tooltipSide: 'top' | 'bottom' | 'left' | 'right' | 'center';
   spotlightPadding?: number;
+  nudge?: string;
 }
 
 interface RouteTour {
@@ -85,6 +86,7 @@ const ROUTE_TOURS: RouteTour[] = [
         targetSelector: '[data-tour="nav-reports"]',
         tooltipSide: 'right',
         spotlightPadding: 8,
+        nudge: 'Try clicking a card or filtering by advisor to explore',
       },
     ],
   },
@@ -127,6 +129,7 @@ const ROUTE_TOURS: RouteTour[] = [
         targetSelector: '[data-tour="actions-client-first"]',
         tooltipSide: 'bottom',
         spotlightPadding: 8,
+        nudge: 'Try clicking "Select" on a red client to start editing',
       },
     ],
   },
@@ -178,6 +181,7 @@ const ROUTE_TOURS: RouteTour[] = [
         targetSelector: '[data-tour="editor-send"]',
         tooltipSide: 'bottom',
         spotlightPadding: 8,
+        nudge: 'Try dragging a slider, then send for approval',
       },
     ],
   },
@@ -229,6 +233,7 @@ const ROUTE_TOURS: RouteTour[] = [
         targetSelector: '[data-tour="reports-generate-all"]',
         tooltipSide: 'bottom',
         spotlightPadding: 8,
+        nudge: 'Try generating all reports, then download a PDF',
       },
     ],
   },
@@ -320,13 +325,11 @@ export default function TourGuide() {
     setMounted(true);
   }, []);
 
-  // Auto-launch tour if not seen yet
+  // Auto-launch tour on every visit
   useEffect(() => {
     if (!mounted || !activeTour) return;
-    if (!localStorage.getItem(activeTour.key)) {
-      const timer = setTimeout(() => setIsActive(true), 700);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => setIsActive(true), 700);
+    return () => clearTimeout(timer);
   }, [mounted, activeTour]);
 
   const steps = activeTour?.steps ?? [];
@@ -349,9 +352,9 @@ export default function TourGuide() {
   }, [isActive, computeRect]);
 
   const dismiss = useCallback(() => {
-    if (activeTour) localStorage.setItem(activeTour.key, '1');
     setIsActive(false);
-  }, [activeTour]);
+  }, []);
+
 
   const next = useCallback(() => {
     if (currentStep < steps.length - 1) {
@@ -439,9 +442,21 @@ export default function TourGuide() {
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-text/75 leading-relaxed mb-5">
+        <p className="text-sm text-text/75 leading-relaxed mb-3">
           {step.description}
         </p>
+
+        {/* Nudge */}
+        {step.nudge && (
+          <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg bg-accent/10 border border-accent/20">
+            <span className="material-symbols-outlined text-accent text-[16px] flex-shrink-0">
+              touch_app
+            </span>
+            <p className="text-xs font-medium text-accent leading-snug">
+              {step.nudge}
+            </p>
+          </div>
+        )}
 
         {/* Progress dots */}
         <div className="flex items-center gap-1.5 mb-5">
@@ -470,7 +485,7 @@ export default function TourGuide() {
             onClick={dismiss}
             className="text-xs text-sage hover:text-text transition-colors"
           >
-            Skip tour
+            Skip
           </button>
           <div className="flex items-center gap-2">
             {currentStep > 0 && (
