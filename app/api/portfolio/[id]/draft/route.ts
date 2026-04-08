@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { kv } from '@/lib/kv'
-import { DraftPortfolio } from '@/lib/types'
+import { DraftPortfolio, HistoryEntry } from '@/lib/types'
 
 export async function GET(
   _req: NextRequest,

@@ -28,7 +28,7 @@ describe('ClientTile Component', () => {
   }
 
   it('renders standard state correctly', () => {
-    render(<ClientTile client={mockClient} advisor={advisor} portfolio={mockPortfolios.client_1} isSelected={false} onToggle={() => {}} />)
+    render(<ClientTile client={mockClient} advisor={advisor} portfolio={mockPortfolios.client_1} isSelected={false} reviewedAt={null} onToggle={() => {}} />)
     expect(screen.getByText('Aoife Murphy')).toBeInTheDocument()
     // It should format the currency using utils implicitly, just check the value text
     expect(screen.getByText('€102,400')).toBeInTheDocument()
@@ -40,7 +40,7 @@ describe('ClientTile Component', () => {
 
   it('handles toggle selection interaction', () => {
     const onToggleMock = jest.fn()
-    render(<ClientTile client={mockClient} advisor={advisor} portfolio={mockPortfolios.client_1} isSelected={false} onToggle={onToggleMock} />)
+    render(<ClientTile client={mockClient} advisor={advisor} portfolio={mockPortfolios.client_1} isSelected={false} reviewedAt={null} onToggle={onToggleMock} />)
     const checkbox = screen.getByRole('checkbox')
     fireEvent.click(checkbox)
     expect(onToggleMock).toHaveBeenCalledTimes(1)

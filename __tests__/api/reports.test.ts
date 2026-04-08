@@ -5,8 +5,7 @@ import { setTestKV } from '@/lib/kv'
 
 describe('GET /api/reports', () => {
   it('returns all 200 clients with default pending status', async () => {
-    const req = new NextRequest('http://localhost/api/reports')
-    const res = await GET(req)
+    const res = await GET()
     const data = await res.json()
     expect(res.status).toBe(200)
     expect(data).toHaveLength(200)
@@ -18,8 +17,7 @@ describe('GET /api/reports', () => {
       generatedAt: new Date().toISOString(),
       month: '2026-03',
     })
-    const req = new NextRequest('http://localhost/api/reports')
-    const res = await GET(req)
+    const res = await GET()
     const data = await res.json()
     const sean = data.find((r: any) => r.id === 'client_001')
     expect(sean.reportStatus.status).toBe('generated')
