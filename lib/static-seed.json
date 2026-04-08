@@ -27410,10 +27410,10 @@
   "ADVISORS": [
     {
       "id": "advisor_andrew",
-      "name": "Andrew Collins",
+      "name": "Andrew O'Donohoe",
       "title": "Director",
-      "photo": "/advisors/andrew-collins.jpg",
-      "initials": "AC"
+      "photo": "/advisors/andrew-odonohoe.jpg",
+      "initials": "AO"
     },
     {
       "id": "advisor_tom",
@@ -27445,17 +27445,17 @@
     },
     {
       "id": "advisor_siobhan",
-      "name": "Siobhan Murray",
+      "name": "Michele McGuirk",
       "title": "Investment Analyst",
-      "photo": "/advisors/siobhan-murray.jpg",
-      "initials": "SM"
+      "photo": "/advisors/michele-mcguirk.jpg",
+      "initials": "MM"
     },
     {
       "id": "advisor_ciaran",
-      "name": "Ciarán Doyle",
+      "name": "Ciaran Giles",
       "title": "Financial Planner",
-      "photo": "/advisors/ciaran-doyle.jpg",
-      "initials": "CD"
+      "photo": "/advisors/ciaran-giles.jpg",
+      "initials": "CG"
     }
   ]
 }
