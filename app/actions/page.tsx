@@ -49,7 +49,7 @@ export default function ActionsClientPickerPage() {
         <p className="text-sm text-sage mb-8">Select a client to begin. Most drifted clients are shown first.</p>
 
         {/* Search */}
-        <div className="relative mb-8">
+        <div data-tour="actions-search" className="relative mb-8">
           <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-sage text-[20px]">search</span>
           <input
             type="text"
@@ -82,6 +82,7 @@ export default function ActionsClientPickerPage() {
                 <Link
                   key={c.id}
                   href={`/actions/${c.id}`}
+                  {...(i === 0 && { 'data-tour': 'actions-client-first' })}
                   className={`flex items-center justify-between px-6 py-4 outline-none focus-visible:ring-2 focus-visible:ring-accent ${i < displayList.length - 1 ? 'border-b border-border/30' : ''} 
                                hover:bg-surface-container transition-colors group cursor-pointer block`}
                 >

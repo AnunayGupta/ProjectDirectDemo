@@ -246,6 +246,7 @@ export default function PortfolioActionsPage({ params }: { params: Promise<{ id:
               <p className="text-[10px] text-sage uppercase tracking-wider">Portfolio Value</p>
               <p className="font-bold tabular-nums text-text">{formatCurrency(client.totalValue)}</p>
             </div>
+            <div data-tour="editor-quick-actions">
             <QuickActions
               onResetToModel={handleResetToModel}
               onResetToProposed={handleResetToProposed}
@@ -253,9 +254,11 @@ export default function PortfolioActionsPage({ params }: { params: Promise<{ id:
               onRaiseCash={() => setShowRaiseCashModal(true)}
               onLiquidateAll={handleLiquidateAll}
             />
+            </div>
             <div className="w-px h-8 bg-border/40" />
             <div className="flex flex-col items-end gap-1">
               <button
+                data-tour="editor-send"
                 onClick={() => setShowApprovalModal(true)}
                 disabled={!isWeightValid || !hasChanges}
                 className="px-5 py-2 bg-accent text-[#1A241B] rounded font-body font-bold text-sm
@@ -274,7 +277,7 @@ export default function PortfolioActionsPage({ params }: { params: Promise<{ id:
         {/* Main workspace: Editor (left) + Impact Preview (right) */}
         <div className="flex flex-1 overflow-hidden">
           {/* Left: Weightings Editor */}
-          <div className="w-[55%] flex flex-col overflow-hidden border-r border-border/40">
+          <div data-tour="editor-weightings" className="w-[55%] flex flex-col overflow-hidden border-r border-border/40">
             <WeightingsEditor
               holdings={draftHoldings}
               onHoldingChange={handleHoldingChange}
@@ -286,7 +289,7 @@ export default function PortfolioActionsPage({ params }: { params: Promise<{ id:
           </div>
 
           {/* Right: Impact Preview */}
-          <div className="w-[45%] flex flex-col overflow-hidden">
+          <div data-tour="editor-impact" className="w-[45%] flex flex-col overflow-hidden">
             <ImpactPreview
               holdings={draftHoldings}
               totalValue={client.totalValue}

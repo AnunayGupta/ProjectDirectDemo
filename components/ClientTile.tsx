@@ -9,6 +9,7 @@ interface ClientTileProps {
   isSelected: boolean
   reviewedAt: Date | null | undefined
   onToggle: (clientId: string) => void
+  isFirst?: boolean
 }
 
 function reviewedLabel(date: Date): string {
@@ -19,7 +20,7 @@ function reviewedLabel(date: Date): string {
   return `Reviewed ${days}d ago`
 }
 
-export default function ClientTile({ client, advisor, portfolio, isSelected, reviewedAt, onToggle }: ClientTileProps) {
+export default function ClientTile({ client, advisor, portfolio, isSelected, reviewedAt, onToggle, isFirst }: ClientTileProps) {
   const perf = formatPerformance(client.monthlyPerformance)
   const drift = getDriftStatus(client.draftStartedAt)
   const holdings = portfolio ? portfolio.holdings : []
@@ -27,6 +28,7 @@ export default function ClientTile({ client, advisor, portfolio, isSelected, rev
   return (
     <Link
       href={`/actions/${client.id}`}
+      {...(isFirst && { 'data-tour': 'client-tile-first' })}
       className={`relative block rounded-lg p-6 transition-all ${
         isSelected
           ? 'bg-[#FFFBF5] border-2 border-accent ring-1 ring-accent/20 shadow-sm'

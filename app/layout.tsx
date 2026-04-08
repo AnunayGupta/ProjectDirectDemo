@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import MainLayout from "@/components/layouts/MainLayout";
+import TourGuide from "@/components/TourGuide";
 import "./globals.css";
 
 const inter = Inter({
@@ -35,6 +36,7 @@ export default function RootLayout({
         <MainLayout>
           {children}
         </MainLayout>
+        <TourGuide />
       </body>
     </html>
   );

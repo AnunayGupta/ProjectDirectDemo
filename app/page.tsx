@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {filteredClients.map(client => (
+            {filteredClients.map((client, index) => (
               <ClientTile
                 key={client.id}
                 client={client}
@@ -133,6 +133,7 @@ export default function Home() {
                 isSelected={selectedIds.has(client.id)}
                 reviewedAt={client.lastReviewedAt ? new Date(client.lastReviewedAt) : null}
                 onToggle={toggleClient}
+                isFirst={index === 0}
               />
             ))}
             {filteredClients.length === 0 && (

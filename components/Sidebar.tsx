@@ -21,16 +21,18 @@ export default function Sidebar() {
         <p className="text-white/60 text-[10px] uppercase tracking-[0.2em] mt-1">Wealth Management</p>
       </div>
 
-      <nav className="flex-1 space-y-2">
+      <nav data-tour="nav" className="flex-1 space-y-2">
         {navItems.map((item) => {
           const isActive =
             item.href === '/'
               ? pathname === '/' || pathname.startsWith('/clients')
               : pathname.startsWith(item.href)
+          const tourId = item.label === 'Actions' ? 'nav-actions' : item.label === 'Reports' ? 'nav-reports' : undefined
           return (
             <Link
               key={item.label}
               href={item.href}
+              {...(tourId && { 'data-tour': tourId })}
               className={cn(
                 "pl-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-white/10 transition-colors duration-200",
                 isActive 

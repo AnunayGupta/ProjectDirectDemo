@@ -134,6 +134,7 @@ export default function ReportsPage() {
               </span>
             </div>
             <button
+              data-tour="reports-generate-all"
               onClick={handleGenerateAll}
               disabled={generating}
               className="bg-accent text-white px-6 py-2.5 text-sm font-semibold hover:bg-accent/90 transition-all duration-200 disabled:opacity-60 flex items-center gap-2"
@@ -156,7 +157,7 @@ export default function ReportsPage() {
         {/* Two-column workspace */}
         <div className="flex flex-1 overflow-hidden">
           {/* LEFT: Client list */}
-          <div className="w-[360px] flex-shrink-0 border-r border-border flex flex-col overflow-hidden bg-surface">
+          <div data-tour="reports-client-list" className="w-[360px] flex-shrink-0 border-r border-border flex flex-col overflow-hidden bg-surface">
             <div className="px-6 py-4 border-b border-border flex items-center justify-between flex-shrink-0">
               <h2 className="font-heading text-lg text-text">Client Reports</h2>
               <span className="text-xs text-sage">{clients.length} clients</span>
@@ -216,6 +217,7 @@ export default function ReportsPage() {
                 <div className="px-8 py-4 border-b border-border bg-surface flex items-center justify-between flex-shrink-0">
                   <h2 className="font-heading text-lg text-text">Report Preview</h2>
                   <button
+                    data-tour="reports-download"
                     onClick={handleDownloadPdf}
                     disabled={downloadingPdf}
                     className="flex items-center gap-2 px-4 py-2 border border-primary text-primary hover:bg-primary/5 transition-all text-xs font-semibold disabled:opacity-50 disabled:cursor-wait"
@@ -235,7 +237,7 @@ export default function ReportsPage() {
                 </div>
 
                 {/* PDF document */}
-                <div className="flex-1 overflow-y-auto px-8 py-8">
+                <div data-tour="reports-preview" className="flex-1 overflow-y-auto px-8 py-8">
                   <div className="bg-white shadow-2xl max-w-3xl mx-auto border border-border min-h-full">
                     {/* PDF Header */}
                     <div

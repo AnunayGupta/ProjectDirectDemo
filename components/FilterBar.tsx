@@ -22,7 +22,7 @@ export default function FilterBar({
   reviewFilter, onReviewChange
 }: FilterBarProps) {
   return (
-    <div className="flex items-center justify-between mb-8">
+    <div data-tour="filter-bar" className="flex items-center justify-between mb-8">
       <div className="flex items-center gap-4">
         {/* Advisor Filter */}
         <div className="relative">
