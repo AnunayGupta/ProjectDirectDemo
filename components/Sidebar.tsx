@@ -12,7 +12,6 @@ export default function Sidebar() {
     { label: 'Clients', icon: 'group', href: '/' },
     { label: 'Actions', icon: 'bolt', href: '/actions' },
     { label: 'Reports', icon: 'analytics', href: '/reports' },
-    { label: 'Settings', icon: 'settings', href: '/settings' },
   ]
 
   return (

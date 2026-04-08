@@ -13,6 +13,10 @@
 # testing
 /coverage
 
+# debug
+/screenshots
+
+
 # next.js
 /.next/
 /out/

@@ -58,7 +58,7 @@ export type Note = {
 export type HistoryEntry = {
   id: string
   clientId: string
-  actionType: "rebalance" | "add_instrument" | "remove_instrument" | "deploy_capital" | "withdraw"
+  actionType: "rebalance" | "add_instrument" | "remove_instrument" | "deploy_capital" | "withdraw" | "rebalance_proposed"
   trades: Array<{
     side: "buy" | "sell"
     ticker: string

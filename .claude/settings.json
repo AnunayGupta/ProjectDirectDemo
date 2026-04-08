@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Read(//var/folders/m_/jl2flbc95xd_kc7dk36qksnr0000gn/T/TemporaryItems//**)",
+      "mcp__stitch__list_projects",
+      "Bash(python3 -c ':*)",
+      "mcp__stitch__list_screens",
+      "mcp__stitch__get_screen",
+      "Bash(curl -L -o /tmp/fetched_image.png \"https://lh3.googleusercontent.com/aida/ADBb0uh8L_9VDEVQAGEbSCvWonaVAQrSdvsyjJz9r1Law5kJD722_WRjsI8ClZvLITV9MCiwGsXhkRKjUVBROEOeYjygoPYk4XHltn-RhHV55pat2nhW98qChGH5hRxcMq61TtdNd3DFmVcTMo7u3IQYryeTonjWmFideNaIBYA-glcvmpqvpA0m0JLCvVTeYBxsNGfbUsfGSfpSPZCQ-_3wC8g5xSxn8LnoPiDjoW2w0cBU9k0tI1Fgftkfsw\")",
+      "Bash(node -e \"const d = require\\('./lib/static-seed.json'\\); console.log\\(JSON.stringify\\(d.SEED_HISTORY['client_130'], null, 2\\)\\)\")"
+    ]
+  }
+}

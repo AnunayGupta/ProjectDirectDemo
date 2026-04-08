@@ -60,7 +60,35 @@ export default function ClientDetailPage({ params }: { params: Promise<{ id: str
 
   if (!data) return null
 
-  const { client, portfolio, notes, history } = data
+  const { client, portfolio, notes } = data
+  const proposed = portfolio.proposed
+
+  // Synthesize a pending history entry when a rebalance has been sent for approval
+  const proposedHistoryEntry: import('@/lib/types').HistoryEntry | null =
+    proposed?.status === 'pending_approval'
+      ? {
+          id: `proposed_${client.id}`,
+          clientId: client.id,
+          actionType: 'rebalance_proposed',
+          advisorId: proposed.advisorId,
+          executedAt: proposed.sentForApprovalAt ?? proposed.draftStartedAt,
+          totalValue: portfolio.accepted.totalValue,
+          trades: proposed.holdings
+            .map(h => {
+              const accepted = portfolio.accepted.holdings.find(a => a.ticker === h.ticker)
+              const delta = ((h.targetWeighting - (accepted?.targetWeighting ?? 0)) / 100) * portfolio.accepted.totalValue
+              return Math.abs(delta) > 1
+                ? { side: (delta > 0 ? 'buy' : 'sell') as 'buy' | 'sell', ticker: h.ticker, name: h.name, amount: Math.abs(delta) }
+                : null
+            })
+            .filter(Boolean) as import('@/lib/types').HistoryEntry['trades'],
+        }
+      : null
+
+  const history = [
+    ...(proposedHistoryEntry ? [proposedHistoryEntry] : []),
+    ...data.history,
+  ]
   const advisor = firmConfig.advisors.find(a => a.id === client.advisorId)
   const drift = getDriftStatus(client.draftStartedAt)
   const perf = formatPerformance(client.monthlyPerformance)
