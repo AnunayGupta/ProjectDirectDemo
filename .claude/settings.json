@@ -12,7 +12,9 @@
       "Bash(node -e \"const d = require\\('./lib/static-seed.json'\\); console.log\\(JSON.stringify\\(d.SEED_HISTORY['client_130'], null, 2\\)\\)\")",
       "Bash(npx tsc:*)",
       "Bash(npx next:*)",
-      "Read(//Users/anuygupta/workplace/ProjectDirectDemo/lib/**)"
+      "Read(//Users/anuygupta/workplace/ProjectDirectDemo/lib/**)",
+      "WebFetch(domain:kestrel.ie)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d['ADVISORS'], indent=2\\)\\)\")"
     ]
   }
 }

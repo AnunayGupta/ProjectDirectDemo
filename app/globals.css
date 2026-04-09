@@ -4,13 +4,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-inter);
+  --font-heading: var(--font-dm-serif);
+  --font-body: var(--font-jost);
 }
 
 :root {
-  --background: #F2EFE9;
-  --foreground: #1A1A1A;
+  --background: #FAFAFA;
+  --foreground: #283745;
 }
 
 body {

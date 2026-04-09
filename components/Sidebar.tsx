@@ -18,7 +18,7 @@ export default function Sidebar() {
     <aside className="h-screen w-[240px] fixed left-0 top-0 bg-primary flex flex-col py-8 z-50">
       <div className="px-8 mb-12">
         <h1 className="font-heading text-accent uppercase tracking-widest text-lg font-bold">{firmConfig.shortName || firmConfig.name}</h1>
-        <p className="text-white/60 text-[10px] uppercase tracking-[0.2em] mt-1">Wealth Management</p>
+        <p className="text-white/60 text-[10px] uppercase tracking-[0.2em] mt-1">Capital</p>
       </div>
 
       <nav data-tour="nav" className="flex-1 space-y-2">

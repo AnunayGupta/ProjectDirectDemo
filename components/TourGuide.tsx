@@ -23,12 +23,12 @@ interface RouteTour {
 const ROUTE_TOURS: RouteTour[] = [
   // ── Home / Client Book ──
   {
-    key: 'clinch_tour_home_v1',
+    key: 'kestrel_tour_home_v1',
     match: (p) => p === '/',
     steps: [
       {
         id: 'welcome',
-        title: 'Welcome to Clinch',
+        title: 'Welcome to Kestrel',
         description:
           "A live wealth management platform built for advisor teams. Let's walk through what you can do — takes under a minute.",
         tooltipSide: 'center',
@@ -93,7 +93,7 @@ const ROUTE_TOURS: RouteTour[] = [
 
   // ── Actions Client Picker ──
   {
-    key: 'clinch_tour_actions_v1',
+    key: 'kestrel_tour_actions_v1',
     match: (p) => p === '/actions',
     steps: [
       {
@@ -136,7 +136,7 @@ const ROUTE_TOURS: RouteTour[] = [
 
   // ── Individual Client Portfolio Editor ──
   {
-    key: 'clinch_tour_editor_v1',
+    key: 'kestrel_tour_editor_v1',
     match: (p) => /^\/actions\/[^/]+$/.test(p),
     steps: [
       {
@@ -188,7 +188,7 @@ const ROUTE_TOURS: RouteTour[] = [
 
   // ── Reports ──
   {
-    key: 'clinch_tour_reports_v1',
+    key: 'kestrel_tour_reports_v1',
     match: (p) => p === '/reports',
     steps: [
       {
@@ -469,7 +469,7 @@ export default function TourGuide() {
                 borderRadius: 99,
                 height: 6,
                 width: i === currentStep ? 20 : 6,
-                backgroundColor: i === currentStep ? '#B5A07A' : '#E2DDD6',
+                backgroundColor: i === currentStep ? '#A67959' : '#E0DEDA',
                 transition: 'all 0.2s ease',
                 border: 'none',
                 cursor: 'pointer',

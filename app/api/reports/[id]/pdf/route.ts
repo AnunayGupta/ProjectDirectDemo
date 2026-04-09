@@ -36,7 +36,7 @@ export async function GET(
     )
 
     const uint8 = new Uint8Array(buffer)
-    const filename = `clinch-report-${client.name.replace(/[^a-z0-9]/gi, '-').toLowerCase()}-march-2026.pdf`
+    const filename = `kestrel-report-${client.name.replace(/[^a-z0-9]/gi, '-').toLowerCase()}-march-2026.pdf`
 
     return new NextResponse(uint8, {
       status: 200,

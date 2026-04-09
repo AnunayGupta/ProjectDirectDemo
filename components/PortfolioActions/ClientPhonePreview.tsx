@@ -57,7 +57,7 @@ export default function ClientPhonePreview({ clientName, holdings, totalValue, o
           />
 
           {/* Screen */}
-          <div className="bg-[#F2EFE9] rounded-[36px] overflow-hidden">
+          <div className="bg-[#FAFAFA] rounded-[36px] overflow-hidden">
             {/* Status bar */}
             <div className="flex items-end justify-between px-6 pt-8 pb-2">
               <span className="text-[11px] font-semibold text-[#1A1A1A]">9:41</span>
@@ -71,8 +71,8 @@ export default function ClientPhonePreview({ clientName, holdings, totalValue, o
             <div className="px-3 pb-5 space-y-3">
               {/* Push notification banner */}
               <div className="bg-white rounded-2xl px-3 py-2.5 shadow-sm flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-xl bg-[#2C3B2D] flex items-center justify-center flex-shrink-0">
-                  <span className="material-symbols-outlined text-[#B5A07A]" style={{ fontSize: 14 }}>account_balance</span>
+                <div className="w-8 h-8 rounded-xl bg-[#004750] flex items-center justify-center flex-shrink-0">
+                  <span className="material-symbols-outlined text-[#A67959]" style={{ fontSize: 14 }}>account_balance</span>
                 </div>
                 <div className="min-w-0">
                   <p className="text-[11px] font-bold text-[#1A1A1A] leading-tight">Portfolio Update</p>
@@ -133,7 +133,7 @@ export default function ClientPhonePreview({ clientName, holdings, totalValue, o
 
                 {/* Actions */}
                 <div className="px-4 pb-4 pt-1 space-y-2">
-                  <button className="w-full py-2.5 bg-[#B5A07A] text-white rounded-xl font-bold text-[12px] tracking-wide">
+                  <button className="w-full py-2.5 bg-[#A67959] text-white rounded-xl font-bold text-[12px] tracking-wide">
                     Approve Changes
                   </button>
                   <button className="w-full py-1.5 text-[#AAA] text-[11px]">

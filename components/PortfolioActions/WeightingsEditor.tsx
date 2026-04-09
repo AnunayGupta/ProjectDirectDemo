@@ -14,10 +14,10 @@ interface WeightingsEditorProps {
 }
 
 const ASSET_CLASS_COLORS: Record<string, string> = {
-  equity: '#2C3B2D',
-  etf: '#B5A07A',
-  bond: '#8A9E8C',
-  cash: '#C4A8A0',
+  equity: '#004750',
+  etf: '#A67959',
+  bond: '#7A9099',
+  cash: '#C4B8AE',
 }
 
 export default function WeightingsEditor({
@@ -144,13 +144,13 @@ export default function WeightingsEditor({
           const isCash = h.ticker === 'CASH'
           const delta = h.targetWeighting - h.currentWeighting
           const deltaValue = (delta / 100) * totalValue
-          const barColor = ASSET_CLASS_COLORS[h.assetClass] ?? '#E2DDD6'
+          const barColor = ASSET_CLASS_COLORS[h.assetClass] ?? '#E0DEDA'
 
           return (
             <div
               key={h.ticker}
               className={`group rounded-lg px-4 py-3 transition-colors ${
-                isCash ? 'bg-[#F2EFE9]/60 border border-border/40' : 'hover:bg-background/60'
+                isCash ? 'bg-[#FAFAFA]/60 border border-border/40' : 'hover:bg-background/60'
               }`}
             >
               {/* Row 1: Name + value */}

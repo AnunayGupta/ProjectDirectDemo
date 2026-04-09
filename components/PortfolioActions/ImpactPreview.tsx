@@ -36,7 +36,7 @@ export default function ImpactPreview({ holdings, totalValue }: ImpactPreviewPro
       </div>
 
       {/* Cash position hero card */}
-      <div className="mx-8 mt-5 px-5 py-4 rounded-lg border border-border/50 bg-[#F2EFE9]">
+      <div className="mx-8 mt-5 px-5 py-4 rounded-lg border border-border/50 bg-[#FAFAFA]">
         <div className="flex items-center justify-between mb-2">
           <span className="text-[10px] font-bold uppercase tracking-wider text-sage">Cash Position</span>
           {Math.abs(cashDelta) > 1 && (

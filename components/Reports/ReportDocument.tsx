@@ -48,12 +48,12 @@ Font.register({
 })
 
 const COLORS = {
-  primary: '#2C3B2D',
-  accent: '#B5A07A',
-  text: '#1A1A1A',
-  sage: '#8A9E8C',
-  border: '#E2DDD6',
-  background: '#F2EFE9',
+  primary: '#004750',
+  accent: '#A67959',
+  text: '#283745',
+  sage: '#7A9099',
+  border: '#E0DEDA',
+  background: '#FAFAFA',
   green: '#2D6A4F',
   red: '#BA1A1A',
   white: '#FFFFFF',
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 6.5,
-    color: '#8A9E8C80',
+    color: '#7A909980',
   },
 })
 
@@ -278,7 +278,7 @@ const ASSET_CLASS_COLORS: Record<string, string> = {
   equity: COLORS.primary,
   etf: COLORS.accent,
   bond: COLORS.sage,
-  cash: '#C4A8A0',
+  cash: '#C4B8AE',
 }
 
 interface ReportDocumentProps {
@@ -313,7 +313,7 @@ export default function ReportDocument({
   return (
     <Document
       title={`${clientName} — Monthly Portfolio Report — March 2026`}
-      author="Clinch Wealth Management"
+      author="Kestrel Capital"
       subject="Monthly Portfolio Report"
       creator="Project Direct"
     >
@@ -444,10 +444,10 @@ export default function ReportDocument({
         <View style={styles.footer} fixed>
           <Text style={styles.footerDisclaimer}>
             This report is for information purposes only and does not constitute investment advice.
-            Prepared by Clinch Wealth Management — Confidential. All portfolio values as at 31 March 2026.
+            Prepared by Kestrel Capital — Confidential. All portfolio values as at 31 March 2026.
           </Text>
           <View style={styles.footerRow}>
-            <Text style={styles.footerText}>Clinch Wealth Management | Dublin 2, Ireland</Text>
+            <Text style={styles.footerText}>Kestrel Capital | Dublin 2, Ireland</Text>
             <Text style={styles.footerText}>Prepared by {advisorName}</Text>
             <Text style={styles.footerText}>Page 1 of 1</Text>
           </View>
